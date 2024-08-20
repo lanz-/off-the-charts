@@ -1,0 +1,164 @@
+[gd_scene load_steps=8 format=3 uid="uid://cndh1ijpoauew"]
+
+[ext_resource type="Script" path="res://scripts/monster.gd" id="1_65b86"]
+[ext_resource type="Texture2D" uid="uid://gg2f1xaecgwq" path="res://assets/necromancer763.png" id="1_o8nqg"]
+[ext_resource type="Texture2D" uid="uid://cb7vl7h37eobi" path="res://assets/mummy92909.png" id="2_v161t"]
+[ext_resource type="Texture2D" uid="uid://biolnu612xr4l" path="res://assets/mummy7573109.png" id="3_eq82y"]
+
+[sub_resource type="Animation" id="Animation_lhv7l"]
+resource_name = "necromancer_in"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Necromancer:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.01, 1, 1), Vector3(1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MummyA:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.249864, 1.77126, -1.65844), Vector3(-0.184446, 1.309, -8.1551e-09)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MummyA:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.592857, -1.12644, -2.00686), Vector3(0.592857, 1.66323, -0.791883)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MummyB:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.852296, -1.04815, 1.29061), Vector3(0.852296, 1.29112, 2.0484)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MummyB:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.239925, 1.78313, -1.70735), Vector3(-0.184446, 1.309, -8.1551e-09)]
+}
+
+[sub_resource type="Animation" id="Animation_mdaon"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Necromancer:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MummyA:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.184446, 1.309, -8.1551e-09)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MummyA:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.592857, 1.66323, -0.791883)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MummyB:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.852296, 1.29112, 2.0484)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MummyB:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.184446, 1.309, -8.1551e-09)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4ms42"]
+_data = {
+"RESET": SubResource("Animation_mdaon"),
+"necromancer_in": SubResource("Animation_lhv7l")
+}
+
+[node name="C90Necromancer" type="Node3D"]
+script = ExtResource("1_65b86")
+anim_name = "necromancer_in"
+
+[node name="Necromancer" type="Sprite3D" parent="."]
+transform = Transform3D(0.254887, -0.345165, 0.903269, 0.0449434, 0.937341, 0.345502, -0.965926, -0.047468, 0.254429, -0.991603, 2.25018, 0.143508)
+alpha_cut = 1
+texture = ExtResource("1_o8nqg")
+
+[node name="MummyA" type="Sprite3D" parent="."]
+transform = Transform3D(0.258819, -0.177153, 0.949542, -8.01677e-09, 0.983038, 0.183402, -0.965926, -0.047468, 0.254429, 0.592857, 1.66323, -0.791883)
+pixel_size = 0.007
+alpha_cut = 1
+texture = ExtResource("2_v161t")
+
+[node name="MummyB" type="Sprite3D" parent="."]
+transform = Transform3D(0.258819, -0.177153, 0.949542, -8.01677e-09, 0.983038, 0.183402, -0.965926, -0.047468, 0.254429, 0.852296, 1.29112, 2.0484)
+alpha_cut = 1
+texture = ExtResource("3_eq82y")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4ms42")
+}

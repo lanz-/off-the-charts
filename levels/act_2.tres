@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="Level" load_steps=13 format=3 uid="uid://dhj6ie2gf8r50"]
+
+[ext_resource type="Script" path="res://scripts/challenge_entity.gd" id="1_ma1or"]
+[ext_resource type="AudioStream" uid="uid://vaetal7deux1" path="res://assets/_intro_05 - Sketchy Logic - Victory and Respite.mp3" id="1_smog7"]
+[ext_resource type="Resource" uid="uid://bbc73yvgosdnh" path="res://monsters/c80_dragon.tres" id="2_ismla"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="2_mlimd"]
+[ext_resource type="Resource" uid="uid://cettq7velru2g" path="res://monsters/c20_ranger.tres" id="2_sbqei"]
+[ext_resource type="AudioStream" uid="uid://dl1yrhd70e0u8" path="res://assets/_battle_3_15 - Sketchy Logic - One True Path.mp3" id="2_yik44"]
+[ext_resource type="Resource" uid="uid://dhx453rbref81" path="res://monsters/c70_giant.tres" id="3_d40y4"]
+[ext_resource type="Resource" uid="uid://bwpv42otoofni" path="res://monsters/c30_spiders.tres" id="4_fo2ai"]
+[ext_resource type="Resource" uid="uid://dhh3a3vapggrm" path="res://monsters/c40_goblins.tres" id="5_7lpvs"]
+[ext_resource type="Resource" uid="uid://do3an2b2vop3o" path="res://monsters/c50_werewolf.tres" id="6_vs6r2"]
+[ext_resource type="Resource" uid="uid://qrhmcf1gush0" path="res://monsters/c60_trolls.tres" id="7_17uaw"]
+
+[sub_resource type="Curve" id="Curve_fapq8"]
+_data = [Vector2(0, 0.5), 0.0, 0.456959, 0, 1, Vector2(0.630542, 0.788132), 0.0, 0.0, 0, 0, Vector2(1, 0.312787), -1.2866, 0.0, 1, 0]
+point_count = 3
+
+[resource]
+script = ExtResource("2_mlimd")
+name = "Act two - Goblin king"
+curve = SubResource("Curve_fapq8")
+pool = Array[ExtResource("1_ma1or")]([ExtResource("2_sbqei"), ExtResource("4_fo2ai"), ExtResource("5_7lpvs"), ExtResource("5_7lpvs"), ExtResource("6_vs6r2"), ExtResource("6_vs6r2"), ExtResource("7_17uaw"), ExtResource("7_17uaw"), ExtResource("7_17uaw"), ExtResource("3_d40y4"), ExtResource("3_d40y4"), ExtResource("3_d40y4"), ExtResource("7_17uaw"), ExtResource("7_17uaw"), ExtResource("7_17uaw"), ExtResource("3_d40y4"), ExtResource("3_d40y4"), ExtResource("3_d40y4"), ExtResource("6_vs6r2"), ExtResource("6_vs6r2"), ExtResource("7_17uaw"), ExtResource("3_d40y4"), ExtResource("2_ismla"), ExtResource("2_ismla"), ExtResource("2_ismla")])
+intro_pages = Array[String](["Hi <username>!
+
+Your last task is looking great!
+
+I'm sorry to say, our lead designer are not entirely convinced :(
+
+Could you please get one more act designed, so we can persuade them?
+
+In act two, they want you to show tension spike and release, whatever that means...
+
+XOXO, Annie, HR Dept"])
+intro_music = ExtResource("1_smog7")
+level_music = ExtResource("2_yik44")

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Level" load_steps=4 format=3 uid="uid://fgf67w50gc12"]
+
+[ext_resource type="AudioStream" uid="uid://vaetal7deux1" path="res://assets/_intro_05 - Sketchy Logic - Victory and Respite.mp3" id="1_bt4ed"]
+[ext_resource type="Script" path="res://scripts/challenge_entity.gd" id="1_ma3fl"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="2_qyuq3"]
+
+[resource]
+script = ExtResource("2_qyuq3")
+name = ""
+pool = Array[ExtResource("1_ma3fl")]([])
+intro_pages = Array[String](["Hi <username>!
+
+This is Annie from HR, thank you for all the good work you have done for us!
+
+I'm terribly sorry, but company don't have budget for your position atm :(
+
+Please stay in touch, I'm definately will be back
+
+XOXO, Annie, HR Dept", "[center]Thank you for playing![/center]
+[center](and unpaid design work :)[/center]"])
+intro_music = ExtResource("1_bt4ed")

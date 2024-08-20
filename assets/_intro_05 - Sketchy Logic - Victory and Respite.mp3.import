@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vaetal7deux1"
+path="res://.godot/imported/_intro_05 - Sketchy Logic - Victory and Respite.mp3-83452271b07dc1a1625b8494212e24aa.mp3str"
+
+[deps]
+
+source_file="res://assets/_intro_05 - Sketchy Logic - Victory and Respite.mp3"
+dest_files=["res://.godot/imported/_intro_05 - Sketchy Logic - Victory and Respite.mp3-83452271b07dc1a1625b8494212e24aa.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

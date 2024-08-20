@@ -1,0 +1,263 @@
+[gd_scene load_steps=33 format=3 uid="uid://6b02jx5eeup8"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_fw1da"]
+[ext_resource type="PackedScene" uid="uid://tfvxpf4xmn7t" path="res://scenes/challenge_graph.tscn" id="1_ujpm5"]
+[ext_resource type="Script" path="res://scripts/challenge_entity.gd" id="2_1snk8"]
+[ext_resource type="Resource" uid="uid://qrhmcf1gush0" path="res://monsters/c60_trolls.tres" id="3_eso7q"]
+[ext_resource type="Resource" uid="uid://dw6n2ycpugj1q" path="res://monsters/c0_critters.tres" id="3_ssnjs"]
+[ext_resource type="Script" path="res://scripts/selectors.gd" id="4_kledx"]
+[ext_resource type="Resource" uid="uid://dkrakxdcwhfng" path="res://monsters/c10_bandits.tres" id="4_wu66d"]
+[ext_resource type="Resource" uid="uid://cettq7velru2g" path="res://monsters/c20_ranger.tres" id="5_8nd1p"]
+[ext_resource type="Resource" uid="uid://bwpv42otoofni" path="res://monsters/c30_spiders.tres" id="6_ihei5"]
+[ext_resource type="Script" path="res://scripts/challenge_spawn.gd" id="7_e1fph"]
+[ext_resource type="Resource" uid="uid://dhh3a3vapggrm" path="res://monsters/c40_goblins.tres" id="7_kdb55"]
+[ext_resource type="Resource" uid="uid://do3an2b2vop3o" path="res://monsters/c50_werewolf.tres" id="8_plj5i"]
+[ext_resource type="Resource" uid="uid://dhx453rbref81" path="res://monsters/c70_giant.tres" id="10_8i8sb"]
+[ext_resource type="Resource" uid="uid://bbc73yvgosdnh" path="res://monsters/c80_dragon.tres" id="11_o31co"]
+[ext_resource type="Resource" uid="uid://bb7udkkxyqu8i" path="res://monsters/c90_necromancer.tres" id="12_uf1nm"]
+[ext_resource type="Resource" uid="uid://cj00i0jefcm5b" path="res://monsters/c100_djinn.tres" id="13_irkeu"]
+[ext_resource type="Script" path="res://scripts/fancy_button.gd" id="15_sw2kt"]
+[ext_resource type="Texture2D" uid="uid://dqualqwgqgc4c" path="res://assets/funbar.png" id="16_v5hf2"]
+[ext_resource type="Script" path="res://scripts/fun_counter.gd" id="17_tl6u0"]
+[ext_resource type="PackedScene" uid="uid://dafcd5xbs7p12" path="res://scenes/main_char.tscn" id="18_0yp0o"]
+[ext_resource type="Script" path="res://scripts/splosions.gd" id="20_mssjs"]
+[ext_resource type="Texture2D" uid="uid://y2naiph2wegb" path="res://assets/explosion.png" id="20_t02m1"]
+[ext_resource type="Texture2D" uid="uid://kqwah4ypuh7x" path="res://assets/ZapAttack.png" id="21_5cbtv"]
+[ext_resource type="Texture2D" uid="uid://c583mcsk8g7eb" path="res://assets/background4.jpg" id="23_37vrq"]
+[ext_resource type="Texture2D" uid="uid://hau51h502r0n" path="res://assets/background5.jpg" id="23_j5g8m"]
+
+[sub_resource type="Curve" id="Curve_j55n6"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Environment" id="Environment_rqa23"]
+background_mode = 1
+background_color = Color(0.0270873, 0.00326576, 0.145804, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mhse"]
+albedo_texture = ExtResource("23_j5g8m")
+metallic = 0.7
+metallic_specular = 0.54
+roughness = 0.53
+uv1_scale = Vector3(2, 2, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_deiia"]
+
+[sub_resource type="Animation" id="Animation_kq2vr"]
+resource_name = "camerabob"
+length = 8.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.439899, 1.29591, -0.0292692), Vector3(-0.439899, 1.29591, 0), Vector3(-0.439899, 1.29591, 0.0361109)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(8.44046, 5.80028, -1.23408), Vector3(8.44046, 5.80028, -1.45309), Vector3(8.44046, 5.80028, -1.83137)]
+}
+
+[sub_resource type="Animation" id="Animation_41hpq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.439899, 1.29591, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(8.44046, 5.80028, -1.45309)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_adkv1"]
+_data = {
+"RESET": SubResource("Animation_41hpq"),
+"camerabob": SubResource("Animation_kq2vr")
+}
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_fw1da")
+spawn_pool = Array[ExtResource("2_1snk8")]([ExtResource("3_ssnjs"), ExtResource("4_wu66d"), ExtResource("5_8nd1p"), ExtResource("6_ihei5"), ExtResource("7_kdb55"), ExtResource("8_plj5i"), ExtResource("3_eso7q"), ExtResource("10_8i8sb"), ExtResource("11_o31co"), ExtResource("12_uf1nm"), ExtResource("13_irkeu")])
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.271441, -0.40986, 0.870824, 0, 0.904795, 0.425848, -0.962455, -0.115593, 0.245598, 8.44046, 5.80028, -1.45309)
+fov = 40.0
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Selectors" type="HBoxContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -32.0
+offset_right = 309.0
+offset_bottom = -20.0
+grow_vertical = 0
+script = ExtResource("4_kledx")
+
+[node name="Option1" type="Button" parent="UI/Selectors"]
+layout_mode = 2
+text = "Option 1"
+script = ExtResource("15_sw2kt")
+
+[node name="Option2" type="Button" parent="UI/Selectors"]
+layout_mode = 2
+text = "Option 2"
+script = ExtResource("15_sw2kt")
+
+[node name="Option3" type="Button" parent="UI/Selectors"]
+layout_mode = 2
+text = "Option 3"
+script = ExtResource("15_sw2kt")
+
+[node name="Option4" type="Button" parent="UI/Selectors"]
+layout_mode = 2
+text = "Option 4"
+script = ExtResource("15_sw2kt")
+
+[node name="Option5" type="Button" parent="UI/Selectors"]
+layout_mode = 2
+text = "Option 5"
+script = ExtResource("15_sw2kt")
+
+[node name="ChallengeGraph" parent="UI" instance=ExtResource("1_ujpm5")]
+custom_minimum_size = Vector2(425, 300)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+curve = SubResource("Curve_j55n6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LevelLabel" type="Label" parent="UI/VBoxContainer"]
+layout_mode = 2
+text = "Level:"
+
+[node name="ActLabel" type="Label" parent="UI/VBoxContainer"]
+layout_mode = 2
+text = "SCENE: 1/20"
+
+[node name="FunLabel" type="Label" parent="UI/VBoxContainer"]
+layout_mode = 2
+text = "FUN:"
+
+[node name="FunCounter" type="TextureProgressBar" parent="UI/VBoxContainer"]
+layout_mode = 2
+value = 100.0
+texture_progress = ExtResource("16_v5hf2")
+script = ExtResource("17_tl6u0")
+
+[node name="MainMenuButton" type="Button" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 8.0
+grow_horizontal = 0
+text = "Main menu"
+script = ExtResource("15_sw2kt")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rqa23")
+
+[node name="MainChar" parent="." instance=ExtResource("18_0yp0o")]
+
+[node name="ChallengeSpawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.261648, -6)
+script = ExtResource("7_e1fph")
+
+[node name="Splosions" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89666, 3.05284, -3.79789)
+script = ExtResource("20_mssjs")
+
+[node name="SA" type="Sprite3D" parent="Splosions"]
+transform = Transform3D(-1.9964e-08, -0.183918, 0.690404, -0.324465, 0.31409, 0.234029, -0.380424, -0.267889, -0.199605, 0, 0, 0.648417)
+texture = ExtResource("20_t02m1")
+
+[node name="SB" type="Sprite3D" parent="Splosions"]
+transform = Transform3D(-7.9856e-09, -0.0723976, 0.578884, -3.55776e-09, 0.162501, 0.257905, -0.2, 0, -2.77015e-08, 0, 0, -1.34656)
+texture = ExtResource("20_t02m1")
+
+[node name="SC" type="Sprite3D" parent="Splosions"]
+transform = Transform3D(-1.64119e-08, -0.0928545, 0.633055, -6.02994e-09, 0.252725, 0.232593, -0.4, -4.36876e-16, -2.94804e-08, 0, 1.61734, 0)
+texture = ExtResource("20_t02m1")
+
+[node name="SD" type="Sprite3D" parent="Splosions"]
+transform = Transform3D(-1.80991e-08, -0.162304, 0.63823, -8.06352e-09, 0.364301, 0.284345, -0.453293, 0, -3.05414e-08, 0.195788, 0.806982, 0.299669)
+texture = ExtResource("21_5cbtv")
+
+[node name="SE" type="Sprite3D" parent="Splosions"]
+transform = Transform3D(-1.90993e-08, -0.22565, 0.732137, -8.50916e-09, 0.506486, 0.326183, -0.478344, 0, -3.50351e-08, 0, -0.245017, -0.597548)
+texture = ExtResource("21_5cbtv")
+
+[node name="Geometry" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(-1.5299e-07, -5, 0, 3.5, -2.18557e-07, 0, 0, 0, 15, 0, -1.45701, -5.55442)
+material_override = SubResource("StandardMaterial3D_6mhse")
+mesh = SubResource("BoxMesh_deiia")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.836717, -0.273818, 0.474267, -0.547636, -0.418359, 0.724618, 0, -0.866025, -0.5, 0, 0, 0)
+
+[node name="Background" type="Sprite3D" parent="."]
+transform = Transform3D(-5.37986e-08, 0, -1, 0, 1, 0, 1.23077, 0, -4.37114e-08, -2.60464, 0, -5.8)
+texture = ExtResource("23_37vrq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_adkv1")
+}
+autoplay = "camerabob"

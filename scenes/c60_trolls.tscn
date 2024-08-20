@@ -1,0 +1,134 @@
+[gd_scene load_steps=7 format=3 uid="uid://dyxg4t44s1sph"]
+
+[ext_resource type="Texture2D" uid="uid://btga7ev4pow7g" path="res://assets/troll4882.png" id="1_brggw"]
+[ext_resource type="Script" path="res://scripts/monster.gd" id="1_q4a7f"]
+[ext_resource type="Texture2D" uid="uid://dx4i2td0dy3m1" path="res://assets/troll403.png" id="2_ue4j1"]
+
+[sub_resource type="Animation" id="Animation_ywsn0"]
+resource_name = "trolls_in"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrollA:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.488236, 8.72544, -8.57034), Vector3(0.488236, 8.72544, -8.57034), Vector3(0.488236, 2.72544, -1.57034)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TrollA:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.361367, 1.95839, -0.857072), Vector3(-0.361367, 1.95839, -0.857072), Vector3(-0.523599, 1.5708, -2.52368e-08)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TrollB:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.520266, 7.20344, -7.2221), Vector3(-0.520266, 1.31455, -1.77766), Vector3(-0.520266, 2.20344, -0.222102)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TrollB:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.447832, 1.85183, -0.588003), Vector3(-0.464089, 1.35049, 0.461367), Vector3(-0.523599, 1.5708, -2.52368e-08)]
+}
+
+[sub_resource type="Animation" id="Animation_jwdwn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrollA:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.488236, 2.72544, -1.57034)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TrollA:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.523599, 1.5708, -2.52368e-08)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TrollB:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.520266, 2.20344, -0.222102)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TrollB:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.523599, 1.5708, -2.52368e-08)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k8v54"]
+_data = {
+"RESET": SubResource("Animation_jwdwn"),
+"trolls_in": SubResource("Animation_ywsn0")
+}
+
+[node name="C60Trolls" type="Node3D"]
+script = ExtResource("1_q4a7f")
+anim_name = "trolls_in"
+
+[node name="TrollA" type="Sprite3D" parent="."]
+transform = Transform3D(-3.1093e-08, -0.5, 0.866026, -2.18557e-08, 0.866026, 0.5, -1, -3.38109e-09, -3.78552e-08, 0.488236, 2.72544, -1.57034)
+flip_h = true
+alpha_cut = 1
+texture = ExtResource("1_brggw")
+
+[node name="TrollB" type="Sprite3D" parent="."]
+transform = Transform3D(-3.1093e-08, -0.5, 0.866025, -2.18557e-08, 0.866025, 0.5, -1, -3.38109e-09, -3.78552e-08, -0.520266, 2.20344, -0.222102)
+alpha_cut = 1
+texture = ExtResource("2_ue4j1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_k8v54")
+}

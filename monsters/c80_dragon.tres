@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ChallengeEntity" load_steps=3 format=3 uid="uid://bbc73yvgosdnh"]
+
+[ext_resource type="PackedScene" uid="uid://d2lne80uedbrf" path="res://scenes/c80_dragon.tscn" id="1_cu3as"]
+[ext_resource type="Script" path="res://scripts/challenge_entity.gd" id="1_qlpqt"]
+
+[resource]
+script = ExtResource("1_qlpqt")
+name = "Dragon"
+scene = ExtResource("1_cu3as")
+challenge_level = 80

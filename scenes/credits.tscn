@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq13307gyt5mw"]
+
+[ext_resource type="Texture2D" uid="uid://c2pt8yqf1gwqu" path="res://assets/letter_back.jpg" id="1_03thk"]
+[ext_resource type="Script" path="res://scripts/credits.gd" id="1_qsli5"]
+[ext_resource type="Script" path="res://scripts/fancy_button.gd" id="3_qpu5s"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qsli5")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_03thk")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 50.0
+offset_right = -100.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "[p]Art Pack https://opengameart.org/content/dungeon-rpg-fantasy-role-playing
+by Nikolai Bird - dicingdangers.com
+https://creativecommons.org/licenses/by/4.0/[/p]
+
+[p]Font Permanent Marker https://fonts.google.com/specimen/Permanent+Marker
+by Font Diner
+http://www.apache.org/licenses/LICENSE-2.0[/p]
+
+[p]Music https://opengameart.org/content/war-of-the-arcane-18-rpg-tracks
+by SketchyLogic
+https://creativecommons.org/licenses/by/3.0/[/p]
+
+[p]Sound FX https://opengameart.org/content/rpg-sound-pack
+by artisticdude
+https://creativecommons.org/publicdomain/zero/1.0/[/p]
+
+[p]Sound FX https://opengameart.org/content/8-bit-sound-effect-pack-vol-001
+by @Shades
+https://creativecommons.org/publicdomain/zero/1.0/[/p]"
+selection_enabled = true
+
+[node name="CloseButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -100.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Close"
+script = ExtResource("3_qpu5s")

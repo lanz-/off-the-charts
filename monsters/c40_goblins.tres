@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ChallengeEntity" load_steps=3 format=3 uid="uid://dhh3a3vapggrm"]
+
+[ext_resource type="PackedScene" uid="uid://ubx671bl5j1w" path="res://scenes/c40_goblins.tscn" id="1_h8xaj"]
+[ext_resource type="Script" path="res://scripts/challenge_entity.gd" id="1_mtw5i"]
+
+[resource]
+script = ExtResource("1_mtw5i")
+name = "Goblins"
+scene = ExtResource("1_h8xaj")
+challenge_level = 40

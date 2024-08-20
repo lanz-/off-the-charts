@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ChallengeEntity" load_steps=3 format=3 uid="uid://cettq7velru2g"]
+
+[ext_resource type="PackedScene" uid="uid://liedaxvohiws" path="res://scenes/c20_ranger.tscn" id="1_8mqgn"]
+[ext_resource type="Script" path="res://scripts/challenge_entity.gd" id="1_mtbaj"]
+
+[resource]
+script = ExtResource("1_mtbaj")
+name = "Ranger"
+scene = ExtResource("1_8mqgn")
+challenge_level = 20

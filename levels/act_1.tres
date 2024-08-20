@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Level" load_steps=12 format=3 uid="uid://diukxew8il2m5"]
+
+[ext_resource type="Script" path="res://scripts/challenge_entity.gd" id="1_7y15h"]
+[ext_resource type="AudioStream" uid="uid://vaetal7deux1" path="res://assets/_intro_05 - Sketchy Logic - Victory and Respite.mp3" id="1_qwjsp"]
+[ext_resource type="AudioStream" uid="uid://gvjs3vl3qjeo" path="res://assets/_battle_2_08 - Sketchy Logic - Taste My Blade.mp3" id="2_esod7"]
+[ext_resource type="Resource" uid="uid://dw6n2ycpugj1q" path="res://monsters/c0_critters.tres" id="2_f7lg3"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="2_y8dcl"]
+[ext_resource type="Resource" uid="uid://dkrakxdcwhfng" path="res://monsters/c10_bandits.tres" id="3_2afec"]
+[ext_resource type="Resource" uid="uid://cettq7velru2g" path="res://monsters/c20_ranger.tres" id="4_qtgk6"]
+[ext_resource type="Resource" uid="uid://bwpv42otoofni" path="res://monsters/c30_spiders.tres" id="5_bj53y"]
+[ext_resource type="Resource" uid="uid://dhh3a3vapggrm" path="res://monsters/c40_goblins.tres" id="6_rmjyn"]
+[ext_resource type="Resource" uid="uid://do3an2b2vop3o" path="res://monsters/c50_werewolf.tres" id="7_57kry"]
+
+[sub_resource type="Curve" id="Curve_b0jnt"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.989529, 0.479769), 0.0470718, 0.0, 0, 0]
+point_count = 2
+
+[resource]
+script = ExtResource("2_y8dcl")
+name = "Act one - Ranger's revenge"
+curve = SubResource("Curve_b0jnt")
+pool = Array[ExtResource("1_7y15h")]([ExtResource("2_f7lg3"), ExtResource("2_f7lg3"), ExtResource("2_f7lg3"), ExtResource("3_2afec"), ExtResource("3_2afec"), ExtResource("3_2afec"), ExtResource("4_qtgk6"), ExtResource("4_qtgk6"), ExtResource("4_qtgk6"), ExtResource("4_qtgk6"), ExtResource("4_qtgk6"), ExtResource("5_bj53y"), ExtResource("5_bj53y"), ExtResource("6_rmjyn"), ExtResource("6_rmjyn"), ExtResource("6_rmjyn"), ExtResource("5_bj53y"), ExtResource("5_bj53y"), ExtResource("6_rmjyn"), ExtResource("6_rmjyn"), ExtResource("5_bj53y"), ExtResource("5_bj53y"), ExtResource("7_57kry"), ExtResource("7_57kry"), ExtResource("7_57kry")])
+intro_pages = Array[String](["Hi, <username>!
+
+Wow, our designers were seriously impressed with your performance!
+	
+They even approved NDA with you (see attached)
+
+They loved your work so much, actually that are sending you OUR VERY FIRST ACT of the game to test your skills.
+
+XOXO, Annie, HR Dept"])
+intro_music = ExtResource("1_qwjsp")
+level_music = ExtResource("2_esod7")

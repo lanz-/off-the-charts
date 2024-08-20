@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ChallengeEntity" load_steps=3 format=3 uid="uid://bwpv42otoofni"]
+
+[ext_resource type="PackedScene" uid="uid://co06vw7qvsoqj" path="res://scenes/c30_spiders.tscn" id="1_6setu"]
+[ext_resource type="Script" path="res://scripts/challenge_entity.gd" id="1_m5utl"]
+
+[resource]
+script = ExtResource("1_m5utl")
+name = "Spiders"
+scene = ExtResource("1_6setu")
+challenge_level = 30

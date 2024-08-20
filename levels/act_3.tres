@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Level" load_steps=16 format=3 uid="uid://cbp43tv2vvhtg"]
+
+[ext_resource type="Script" path="res://scripts/challenge_entity.gd" id="1_8kpya"]
+[ext_resource type="AudioStream" uid="uid://vaetal7deux1" path="res://assets/_intro_05 - Sketchy Logic - Victory and Respite.mp3" id="1_ssmfn"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="2_5mjvs"]
+[ext_resource type="Resource" uid="uid://dhh3a3vapggrm" path="res://monsters/c40_goblins.tres" id="2_d5ljf"]
+[ext_resource type="AudioStream" uid="uid://db2ylh10rasln" path="res://assets/_battle_4_12 - Sketchy Logic - Duel with the Angel Slayer.mp3" id="2_nry4k"]
+[ext_resource type="Resource" uid="uid://do3an2b2vop3o" path="res://monsters/c50_werewolf.tres" id="3_afcvm"]
+[ext_resource type="Resource" uid="uid://qrhmcf1gush0" path="res://monsters/c60_trolls.tres" id="4_yv07m"]
+[ext_resource type="Resource" uid="uid://dhx453rbref81" path="res://monsters/c70_giant.tres" id="5_7p1aw"]
+[ext_resource type="Resource" uid="uid://bbc73yvgosdnh" path="res://monsters/c80_dragon.tres" id="6_ydckg"]
+[ext_resource type="Resource" uid="uid://bb7udkkxyqu8i" path="res://monsters/c90_necromancer.tres" id="7_j1nha"]
+[ext_resource type="Resource" uid="uid://cj00i0jefcm5b" path="res://monsters/c100_djinn.tres" id="8_g80cu"]
+[ext_resource type="Resource" uid="uid://dw6n2ycpugj1q" path="res://monsters/c0_critters.tres" id="9_e1x4h"]
+[ext_resource type="Resource" uid="uid://dkrakxdcwhfng" path="res://monsters/c10_bandits.tres" id="10_110y0"]
+[ext_resource type="Resource" uid="uid://bwpv42otoofni" path="res://monsters/c30_spiders.tres" id="11_81djg"]
+
+[sub_resource type="Curve" id="Curve_4ttwr"]
+_data = [Vector2(0.00536193, 0.351906), 0.0, 1.4, 0, 0, Vector2(0.400804, 0.596774), 0.0, 0.0, 0, 0, Vector2(0.735925, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[resource]
+script = ExtResource("2_5mjvs")
+name = "Act three - Mastermind behind it all"
+curve = SubResource("Curve_4ttwr")
+pool = Array[ExtResource("1_8kpya")]([ExtResource("2_d5ljf"), ExtResource("3_afcvm"), ExtResource("3_afcvm"), ExtResource("3_afcvm"), ExtResource("4_yv07m"), ExtResource("4_yv07m"), ExtResource("4_yv07m"), ExtResource("5_7p1aw"), ExtResource("4_yv07m"), ExtResource("4_yv07m"), ExtResource("5_7p1aw"), ExtResource("6_ydckg"), ExtResource("7_j1nha"), ExtResource("7_j1nha"), ExtResource("8_g80cu"), ExtResource("6_ydckg"), ExtResource("6_ydckg"), ExtResource("4_yv07m"), ExtResource("9_e1x4h"), ExtResource("10_110y0"), ExtResource("11_81djg"), ExtResource("4_yv07m"), ExtResource("8_g80cu"), ExtResource("9_e1x4h"), ExtResource("3_afcvm")])
+intro_pages = Array[String](["Hi <username>!
+
+Woah! Good news! Senior designer was greatly impressed with your work on act two!
+	
+I'm pitching your role now as ASSISTANT TO SENIOR EVENT DESIGNER!!!
+
+As it is expeted, there's more advanced task for this position
+	
+Don't worry, it's well within your skill range
+Act three involves some real mean monsters and FINAL BOSSES
+
+XOXO, Annie, HR Dept"])
+intro_music = ExtResource("1_ssmfn")
+level_music = ExtResource("2_nry4k")

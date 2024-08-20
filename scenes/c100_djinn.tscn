@@ -1,0 +1,148 @@
+[gd_scene load_steps=9 format=3 uid="uid://c1df0xbwyedcu"]
+
+[ext_resource type="Script" path="res://scripts/monster.gd" id="1_psc7l"]
+[ext_resource type="Texture2D" uid="uid://bdxwadxsxbut0" path="res://assets/anslithron543.png" id="1_rm0g6"]
+[ext_resource type="Texture2D" uid="uid://gkur2arq7gkw" path="res://assets/skel534.png" id="2_c61o0"]
+[ext_resource type="Texture2D" uid="uid://bnthrecjcqa7f" path="res://assets/skeleton3862.png" id="3_fxvks"]
+[ext_resource type="Texture2D" uid="uid://i3u12b0u8dpj" path="res://assets/skeleton.png" id="4_8jq8s"]
+
+[sub_resource type="Animation" id="Animation_qslft"]
+resource_name = "djinn_in"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Djinn:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.1, 0.1, 1), Vector3(0.1, 0.55, 1), Vector3(1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SkeletonA:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.433333, 0.533333, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.0500777, -3.10967, 1.41376), Vector3(0.0500777, -2.37117, 1.98662), Vector3(0.0500777, -1.63266, 1.43554), Vector3(0.0500777, -0.894157, 2.62026), Vector3(0.0500777, -0.155652, 1.14115), Vector3(0.0500777, 0.0905159, 2.02312), Vector3(0.0500777, 0.829021, 1.19567), Vector3(0.0500777, 1.32136, 1.41376)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SkeletonC:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667, 0.533333, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.693924, -1.4187, 0.0520024), Vector3(0.693924, -1.10936, 0.426694), Vector3(0.693924, -0.800014, -0.302274), Vector3(0.693924, -0.49067, 0.315179), Vector3(0.693924, -0.181326, -0.0457305), Vector3(0.693924, 0.128018, 0.396546), Vector3(0.693924, 0.437362, 0.00296998), Vector3(0.693924, 0.746706, 0.538119), Vector3(0.693924, 1.05605, -0.108454), Vector3(0.693924, 1.36539, 0.0520024)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SkeletonD:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1.08066, -5.75861, -1.66872), Vector3(1.08066, -4.14653, -0.769213), Vector3(1.08066, -2.53446, -2.09343), Vector3(1.08066, -0.922381, -0.932561), Vector3(1.08066, 0.286675, -2.13916), Vector3(1.08066, 1.49573, -1.66872)]
+}
+
+[sub_resource type="Animation" id="Animation_vi54s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Djinn:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SkeletonA:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0500777, 1.32136, 1.41376)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SkeletonC:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.693924, 1.36539, 0.0520024)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SkeletonD:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.08066, 1.49573, -1.66872)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fe0qa"]
+_data = {
+"RESET": SubResource("Animation_vi54s"),
+"djinn_in": SubResource("Animation_qslft")
+}
+
+[node name="C100Djinn" type="Node3D"]
+script = ExtResource("1_psc7l")
+anim_name = "djinn_in"
+
+[node name="Djinn" type="Sprite3D" parent="."]
+transform = Transform3D(0.258819, -0.329463, 0.908002, -1.49093e-08, 0.940032, 0.341085, -0.965926, -0.0882794, 0.243298, -1.2905, 1.74892, -1.23379)
+alpha_cut = 1
+texture = ExtResource("1_rm0g6")
+
+[node name="SkeletonA" type="Sprite3D" parent="."]
+transform = Transform3D(0.258819, -0.329463, 0.908002, -1.49093e-08, 0.940032, 0.341085, -0.965926, -0.0882793, 0.243298, 0.0500777, 1.32136, 1.41376)
+pixel_size = 0.005
+alpha_cut = 1
+texture = ExtResource("2_c61o0")
+
+[node name="SkeletonC" type="Sprite3D" parent="."]
+transform = Transform3D(0.258819, -0.329463, 0.908002, -1.49093e-08, 0.940032, 0.341085, -0.965926, -0.0882793, 0.243298, 0.693924, 1.36539, 0.0520024)
+flip_h = true
+pixel_size = 0.005
+alpha_cut = 1
+texture = ExtResource("3_fxvks")
+
+[node name="SkeletonD" type="Sprite3D" parent="."]
+transform = Transform3D(0.258819, -0.329463, 0.908002, -1.49093e-08, 0.940032, 0.341085, -0.965926, -0.0882793, 0.243298, 1.08066, 1.49573, -1.66872)
+alpha_cut = 1
+texture = ExtResource("4_8jq8s")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fe0qa")
+}

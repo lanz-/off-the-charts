@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ChallengeEntity" load_steps=3 format=3 uid="uid://bb7udkkxyqu8i"]
+
+[ext_resource type="PackedScene" uid="uid://cndh1ijpoauew" path="res://scenes/c90_necromancer.tscn" id="1_a7x1x"]
+[ext_resource type="Script" path="res://scripts/challenge_entity.gd" id="1_us8al"]
+
+[resource]
+script = ExtResource("1_us8al")
+name = "Necromancer"
+scene = ExtResource("1_a7x1x")
+challenge_level = 90

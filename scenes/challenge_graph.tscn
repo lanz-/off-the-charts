@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://tfvxpf4xmn7t"]
+
+[ext_resource type="Script" path="res://scripts/challenge_plot.gd" id="1_8pdm0"]
+[ext_resource type="Script" path="res://scripts/challenge_graph.gd" id="1_nfmfx"]
+
+[sub_resource type="Curve" id="Curve_xpner"]
+_data = [Vector2(0, 0), 0.0, 1.0, 0, 1, Vector2(1, 1), 1.0, 0.0, 1, 0]
+point_count = 2
+
+[node name="ChallengeGraph" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nfmfx")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="ChallengeAxis" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ChallengePlot" type="Control" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_8pdm0")
+curve = SubResource("Curve_xpner")
+
+[node name="Filler" type="TextureRect" parent="GridContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+expand_mode = 3
+
+[node name="TimeAxis" type="Label" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Challenge"
+horizontal_alignment = 2

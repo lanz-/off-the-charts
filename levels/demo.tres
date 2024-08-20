@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Level" load_steps=17 format=3 uid="uid://b80ynnc3byd4h"]
+
+[ext_resource type="AudioStream" uid="uid://vaetal7deux1" path="res://assets/_intro_05 - Sketchy Logic - Victory and Respite.mp3" id="1_dk1rx"]
+[ext_resource type="Script" path="res://scripts/challenge_entity.gd" id="1_g76tp"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="2_hdn0g"]
+[ext_resource type="Resource" uid="uid://dw6n2ycpugj1q" path="res://monsters/c0_critters.tres" id="2_l6cta"]
+[ext_resource type="AudioStream" uid="uid://byp3vvy6xrswp" path="res://assets/_battle_5_16 - Sketchy Logic - Destroy the Divine.mp3" id="2_obhrs"]
+[ext_resource type="Resource" uid="uid://dkrakxdcwhfng" path="res://monsters/c10_bandits.tres" id="3_4mcax"]
+[ext_resource type="Resource" uid="uid://cettq7velru2g" path="res://monsters/c20_ranger.tres" id="4_r3lto"]
+[ext_resource type="Resource" uid="uid://bwpv42otoofni" path="res://monsters/c30_spiders.tres" id="5_vuro7"]
+[ext_resource type="Resource" uid="uid://dhh3a3vapggrm" path="res://monsters/c40_goblins.tres" id="6_iu21a"]
+[ext_resource type="Resource" uid="uid://do3an2b2vop3o" path="res://monsters/c50_werewolf.tres" id="7_k2wwk"]
+[ext_resource type="Resource" uid="uid://qrhmcf1gush0" path="res://monsters/c60_trolls.tres" id="8_v7vfw"]
+[ext_resource type="Resource" uid="uid://dhx453rbref81" path="res://monsters/c70_giant.tres" id="9_64ht2"]
+[ext_resource type="Resource" uid="uid://cj00i0jefcm5b" path="res://monsters/c100_djinn.tres" id="10_bl6cn"]
+[ext_resource type="Resource" uid="uid://bb7udkkxyqu8i" path="res://monsters/c90_necromancer.tres" id="11_7uxph"]
+[ext_resource type="Resource" uid="uid://bbc73yvgosdnh" path="res://monsters/c80_dragon.tres" id="12_0i3y8"]
+
+[sub_resource type="Curve" id="Curve_kc102"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.254692, 0.101173), 0.0, 0.0, 0, 0, Vector2(0.506702, 0.5), 5.23142, 5.23142, 0, 0, Vector2(0.619303, 0.796188), 0.0, 0.0, 0, 0, Vector2(0.753351, 0.401759), 0.0, 0.0, 0, 0, Vector2(0.899464, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[resource]
+script = ExtResource("2_hdn0g")
+name = "Demo"
+curve = SubResource("Curve_kc102")
+pool = Array[ExtResource("1_g76tp")]([ExtResource("2_l6cta"), ExtResource("3_4mcax"), ExtResource("3_4mcax"), ExtResource("4_r3lto"), ExtResource("4_r3lto"), ExtResource("5_vuro7"), ExtResource("6_iu21a"), ExtResource("7_k2wwk"), ExtResource("5_vuro7"), ExtResource("6_iu21a"), ExtResource("8_v7vfw"), ExtResource("8_v7vfw"), ExtResource("8_v7vfw"), ExtResource("9_64ht2"), ExtResource("9_64ht2"), ExtResource("3_4mcax"), ExtResource("10_bl6cn"), ExtResource("11_7uxph"), ExtResource("12_0i3y8"), ExtResource("9_64ht2"), ExtResource("3_4mcax"), ExtResource("5_vuro7"), ExtResource("7_k2wwk"), ExtResource("9_64ht2"), ExtResource("11_7uxph")])
+intro_pages = Array[String](["Hey <username>!!!
+
+Great news! The design department was greatly impressed with your act three
+	
+AND I have decided to offer you position of the SENIOR EVENT DESIGNER!
+
+Minor setback, due process is to approve all senior positions with CDO, and he can be an a** sometimes :(
+	
+Could you please design our demo for reveal event, so I could pitch it to CDO?
+
+Looking forward to work with you, <username>!
+XOXO, Annie, HR Dept"])
+intro_music = ExtResource("1_dk1rx")
+level_music = ExtResource("2_obhrs")

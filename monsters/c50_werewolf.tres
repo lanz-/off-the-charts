@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ChallengeEntity" load_steps=3 format=3 uid="uid://do3an2b2vop3o"]
+
+[ext_resource type="Script" path="res://scripts/challenge_entity.gd" id="1_4coey"]
+[ext_resource type="PackedScene" uid="uid://drpclgq05o5ys" path="res://scenes/c50_werewolf.tscn" id="1_gtx0x"]
+
+[resource]
+script = ExtResource("1_4coey")
+name = "Werewolf"
+scene = ExtResource("1_gtx0x")
+challenge_level = 50

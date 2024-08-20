@@ -1,0 +1,102 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2lne80uedbrf"]
+
+[ext_resource type="Script" path="res://scripts/monster.gd" id="1_bn0dp"]
+[ext_resource type="Texture2D" uid="uid://dloghds3f33lr" path="res://assets/dragon3.png" id="1_poj3x"]
+
+[sub_resource type="Animation" id="Animation_5ryn1"]
+resource_name = "dragon_in"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dragon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.233333, 0.266667, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.523599, 1.39626, -2.52368e-08), Vector3(-0.523599, 0.610865, -3.12125e-08), Vector3(-0.523599, -0.599957, -2.78404e-08), Vector3(-0.523599, -1.62378, -5.44839e-08), Vector3(-0.523599, -2.69124, -6.45888e-08), Vector3(-0.523599, 2.83865, -4.64522e-08), Vector3(-0.523599, 1.39626, -2.52368e-08)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dragon:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.1, 0.1, 0.1), Vector3(1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Dragon:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.2, -1.36061), Vector3(0, 2.2, -1.36061)]
+}
+
+[sub_resource type="Animation" id="Animation_5dgg2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dragon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.523599, 1.39626, -2.52368e-08)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dragon:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Dragon:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2.2, -1.36061)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cskxu"]
+_data = {
+"RESET": SubResource("Animation_5dgg2"),
+"dragon_in": SubResource("Animation_5ryn1")
+}
+
+[node name="C80Dragon" type="Node3D"]
+script = ExtResource("1_bn0dp")
+anim_name = "dragon_in"
+
+[node name="Dragon" type="Sprite3D" parent="."]
+transform = Transform3D(0.173648, -0.492404, 0.852868, -2.18557e-08, 0.866025, 0.5, -0.984808, -0.0868241, 0.150384, 0, 2.2, -1.36061)
+texture = ExtResource("1_poj3x")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cskxu")
+}

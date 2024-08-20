@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bot8lhnp15822"
+path="res://.godot/imported/_battle_1_07 - Sketchy Logic - Shop of the Arcane.mp3-36bb804f9c4bb52664bf375b695c4d5e.mp3str"
+
+[deps]
+
+source_file="res://assets/_battle_1_07 - Sketchy Logic - Shop of the Arcane.mp3"
+dest_files=["res://.godot/imported/_battle_1_07 - Sketchy Logic - Shop of the Arcane.mp3-36bb804f9c4bb52664bf375b695c4d5e.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

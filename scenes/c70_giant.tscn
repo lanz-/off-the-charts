@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://h8omrjmu70d5"]
+
+[ext_resource type="Texture2D" uid="uid://bpw71jbllwx5m" path="res://assets/giant632.png" id="1_6wmgv"]
+[ext_resource type="Script" path="res://scripts/monster.gd" id="1_q4a4d"]
+
+[sub_resource type="Animation" id="Animation_aj0d6"]
+resource_name = "giant_in"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Giant:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.166667, 0.266667, 0.366667, 0.466667, 0.566667, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.240552, -5.71075, 0.0208452), Vector3(0.240552, -4.51986, -1.06933), Vector3(0.240552, -2.76672, -1.04845), Vector3(0.240552, -0.841029, 0.689087), Vector3(0.240552, 0.9699, -1.16808), Vector3(0.240552, 2.99368, 0.919307), Vector3(0.240552, 4.64497, -0.89271), Vector3(0.240552, 5.00727, -0.261347)]
+}
+
+[sub_resource type="Animation" id="Animation_71e06"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Giant:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.240552, 5.00727, -0.261347)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cq4qx"]
+_data = {
+"RESET": SubResource("Animation_71e06"),
+"giant_in": SubResource("Animation_aj0d6")
+}
+
+[node name="C70Giant" type="Node3D"]
+script = ExtResource("1_q4a4d")
+anim_name = "giant_in"
+
+[node name="Giant" type="Sprite3D" parent="."]
+transform = Transform3D(0.258819, -0.22921, 0.938336, -1.03725e-08, 0.971437, 0.237296, -0.965926, -0.0614167, 0.251426, 0.240552, 5.00727, -0.261347)
+pixel_size = 0.02
+texture = ExtResource("1_6wmgv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cq4qx")
+}

@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf5nb1gjxu6ri"]
+
+[ext_resource type="Script" path="res://scripts/level_select.gd" id="1_177sr"]
+[ext_resource type="Script" path="res://scripts/fancy_button.gd" id="2_4lrxh"]
+[ext_resource type="Texture2D" uid="uid://o3wyifhtp3mo" path="res://assets/dungeon1.jpg" id="3_uhjjj"]
+
+[node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_177sr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.7
+anchor_right = 1.0
+anchor_bottom = 0.9
+offset_left = 200.0
+offset_right = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tutorial" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Tutorial"
+script = ExtResource("2_4lrxh")
+
+[node name="Act1" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Act one"
+script = ExtResource("2_4lrxh")
+
+[node name="Act2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Act two"
+script = ExtResource("2_4lrxh")
+
+[node name="Act3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Act three"
+script = ExtResource("2_4lrxh")
+
+[node name="Demo" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Demo"
+script = ExtResource("2_4lrxh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_uhjjj")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ChallengeEntity" load_steps=3 format=3 uid="uid://qrhmcf1gush0"]
+
+[ext_resource type="Script" path="res://scripts/challenge_entity.gd" id="1_6c12r"]
+[ext_resource type="PackedScene" uid="uid://dyxg4t44s1sph" path="res://scenes/c60_trolls.tscn" id="1_yylhs"]
+
+[resource]
+script = ExtResource("1_6c12r")
+name = "Trolls"
+scene = ExtResource("1_yylhs")
+challenge_level = 60

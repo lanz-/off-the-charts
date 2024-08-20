@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="Level" load_steps=9 format=3 uid="uid://cmbgc26siu7m3"]
+
+[ext_resource type="AudioStream" uid="uid://vaetal7deux1" path="res://assets/_intro_05 - Sketchy Logic - Victory and Respite.mp3" id="1_n8ro1"]
+[ext_resource type="Script" path="res://scripts/challenge_entity.gd" id="1_rjsad"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="2_5t25g"]
+[ext_resource type="Resource" uid="uid://dw6n2ycpugj1q" path="res://monsters/c0_critters.tres" id="2_hp6n2"]
+[ext_resource type="AudioStream" uid="uid://bot8lhnp15822" path="res://assets/_battle_1_07 - Sketchy Logic - Shop of the Arcane.mp3" id="2_qpe52"]
+[ext_resource type="Resource" uid="uid://cettq7velru2g" path="res://monsters/c20_ranger.tres" id="3_qy548"]
+[ext_resource type="Resource" uid="uid://dkrakxdcwhfng" path="res://monsters/c10_bandits.tres" id="4_u0341"]
+
+[sub_resource type="Curve" id="Curve_cabjh"]
+_data = [Vector2(0, 0.0954868), 0.0, 0.0720422, 0, 1, Vector2(1, 0.176974), -0.28703, 0.0, 0, 0]
+point_count = 2
+
+[resource]
+script = ExtResource("2_5t25g")
+name = "Tutorial - Ranger of the Green Valley"
+curve = SubResource("Curve_cabjh")
+pool = Array[ExtResource("1_rjsad")]([ExtResource("2_hp6n2"), ExtResource("2_hp6n2"), ExtResource("2_hp6n2"), ExtResource("2_hp6n2"), ExtResource("2_hp6n2"), ExtResource("2_hp6n2"), ExtResource("2_hp6n2"), ExtResource("2_hp6n2"), ExtResource("3_qy548"), ExtResource("3_qy548"), ExtResource("3_qy548"), ExtResource("3_qy548"), ExtResource("4_u0341"), ExtResource("4_u0341"), ExtResource("4_u0341"), ExtResource("4_u0341"), ExtResource("4_u0341"), ExtResource("4_u0341"), ExtResource("4_u0341"), ExtResource("4_u0341"), ExtResource("3_qy548"), ExtResource("4_u0341"), ExtResource("3_qy548"), ExtResource("4_u0341"), ExtResource("3_qy548")])
+intro_pages = Array[String](["Hi, <username>!
+
+This is Annie from HR.
+
+Glad to tell you, that your application for EVENT DESIGNER position passed preacceptance!
+
+There's test task attached to this letter.
+Please design 20 EVENTS for it, there should be nothing special, just LOW-LEVEL MOBS.
+    
+Our design guidelines are on the following pages:", "You can pick events in the lower left corner of the screen, by clicking on them.
+
+[img=500]res://assets/tut_opts.png[/img]", "Look at the graph to see if the event challenge is expected by our focus group (blue line)
+
+If the event is too challenging, the player will be frustrated (red) and LOSE FUN
+
+If the event is too easy, the player will be bored (beige) and also LOSE FUN
+
+If the event is of the expected challenge (green), the FUN is INCREASED!
+
+[img=500]res://assets/tut_challenge.png[/img]", "If FUN is depleted, the player will drop our game and your task is failed
+[img=500]res://assets/tut_fun.png[/img]
+
+Good luck!
+XOXO, Annie, HR Dept"])
+intro_music = ExtResource("1_n8ro1")
+level_music = ExtResource("2_qpe52")

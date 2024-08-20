@@ -1,0 +1,219 @@
+[gd_scene load_steps=9 format=3 uid="uid://liedaxvohiws"]
+
+[ext_resource type="Texture2D" uid="uid://c7je1ilh5opra" path="res://assets/bear2476.png" id="1_341gu"]
+[ext_resource type="Script" path="res://scripts/monster.gd" id="1_qxoxq"]
+[ext_resource type="Texture2D" uid="uid://cg8fd34m80b5d" path="res://assets/cat647.png" id="2_ljkfw"]
+[ext_resource type="Texture2D" uid="uid://dywpw8k1a1cb2" path="res://assets/shroom342.png" id="3_yud6f"]
+[ext_resource type="Texture2D" uid="uid://cihrsc41hme02" path="res://assets/ranger.png" id="4_y5tm7"]
+
+[sub_resource type="Animation" id="Animation_ehwqg"]
+resource_name = "ranger_in"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bear:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.0696972, 7.28897, 4.69), Vector3(0.0696972, 1.69761, 1.12906)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cat:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.42853, 1.31685, -9.61123), Vector3(0.42853, 4.95402, -4.89927), Vector3(0.42853, 3.53047, -0.908579), Vector3(0.42853, 0.704718, -0.130371)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Shroom:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.433333, 0.5, 0.566667, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.705234, -14.161, -2.47512), Vector3(0.705234, -4.70626, -2.47512), Vector3(0.705234, -2.88404, -2.47512), Vector3(0.705234, -1.23281, -2.47512), Vector3(0.705234, 1.49409, -2.47512), Vector3(0.705234, 2.85754, -2.47512)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Ranger:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(2.2503, 0.973799, 0.0518484), Vector3(2.2503, 2.39735, 0.0518484)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Shroom:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.533333, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.01, 0.01, 0.01), Vector3(0.1, 0.1, 0.1), Vector3(1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Bear:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.333333, 0.433333, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.268157, 1.42032, 0.483221), Vector3(0.306388, 1.58248, -3.13943), Vector3(-0.0566039, 1.35708, 2.64271), Vector3(-0.0355062, 1.55571, 2.25071), Vector3(-0.302921, 1.52267, 0.123505)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Ranger:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.01, 0.01, 0.01), Vector3(1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tg1vm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bear:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0696972, 1.69761, 1.12906)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cat:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.42853, 0.704718, -0.130371)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Shroom:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.705234, 2.85754, -2.47512)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Ranger:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2.2503, 2.39735, 0.0518484)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Shroom:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Bear:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.306388, 1.58248, -3.13943)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Ranger:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t3adh"]
+_data = {
+"RESET": SubResource("Animation_tg1vm"),
+"ranger_in": SubResource("Animation_ehwqg")
+}
+
+[node name="C20Ranger" type="Node3D"]
+script = ExtResource("1_qxoxq")
+anim_name = "ranger_in"
+
+[node name="Bear" type="Sprite3D" parent="."]
+transform = Transform3D(0.0110322, -0.301621, 0.953364, -0.00205916, -0.953427, -0.301617, 0.999937, 0.00136437, -0.0111395, 0.0696972, 1.69761, 1.12906)
+flip_h = true
+alpha_cut = 1
+texture = ExtResource("1_341gu")
+
+[node name="Cat" type="Sprite3D" parent="."]
+transform = Transform3D(0.0110323, -0.301621, 0.953364, 0.00349013, 0.953428, 0.301601, -0.999933, 0, 0.0115712, 0.42853, 0.704718, -0.130371)
+alpha_cut = 1
+texture = ExtResource("2_ljkfw")
+
+[node name="Shroom" type="Sprite3D" parent="."]
+transform = Transform3D(0.0110323, -0.301621, 0.953364, 0.00349013, 0.953428, 0.301601, -0.999933, 8.14907e-09, 0.0115712, 0.705234, 2.85754, -2.47512)
+flip_h = true
+alpha_cut = 1
+texture = ExtResource("3_yud6f")
+
+[node name="Ranger" type="Sprite3D" parent="."]
+transform = Transform3D(0.0110323, -0.301621, 0.953364, 0.00349013, 0.953428, 0.301601, -0.999933, 7.68341e-09, 0.0115712, 2.2503, 2.39735, 0.0518484)
+alpha_cut = 1
+texture = ExtResource("4_y5tm7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_t3adh")
+}

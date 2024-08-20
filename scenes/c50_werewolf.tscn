@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://drpclgq05o5ys"]
+
+[ext_resource type="Texture2D" uid="uid://cyv2m4bnbrkjh" path="res://assets/werewolf747.png" id="1_cou4y"]
+[ext_resource type="Script" path="res://scripts/monster.gd" id="1_lngda"]
+
+[sub_resource type="Animation" id="Animation_7vmut"]
+resource_name = "werewolf_in"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Werewolf:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.366667, 0.433333, 0.466667, 0.5, 0.533333, 0.566667, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_rdy0u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Werewolf:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vv67j"]
+_data = {
+"RESET": SubResource("Animation_rdy0u"),
+"werewolf_in": SubResource("Animation_7vmut")
+}
+
+[node name="C50Werewolf" type="Node3D"]
+script = ExtResource("1_lngda")
+anim_name = "werewolf_in"
+
+[node name="Werewolf" type="Sprite3D" parent="."]
+transform = Transform3D(0.258819, -0.299882, 0.918196, -1.35707e-08, 0.950586, 0.310461, -0.965926, -0.0803532, 0.24603, 0.501585, 2.52249, -0.9)
+texture = ExtResource("1_cou4y")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vv67j")
+}

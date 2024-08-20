@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ChallengeEntity" load_steps=3 format=3 uid="uid://dkrakxdcwhfng"]
+
+[ext_resource type="PackedScene" uid="uid://dqpx0tk6abphk" path="res://scenes/c10_bandits.tscn" id="1_2aq51"]
+[ext_resource type="Script" path="res://scripts/challenge_entity.gd" id="1_q5qsp"]
+
+[resource]
+script = ExtResource("1_q5qsp")
+name = "Twin bandits"
+scene = ExtResource("1_2aq51")
+challenge_level = 10

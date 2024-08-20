@@ -1,0 +1,212 @@
+[gd_scene load_steps=11 format=3 uid="uid://ubx671bl5j1w"]
+
+[ext_resource type="Texture2D" uid="uid://dikcvpnu1npmw" path="res://assets/goblin424.png" id="1_8cygn"]
+[ext_resource type="Script" path="res://scripts/monster.gd" id="1_y23tc"]
+[ext_resource type="Texture2D" uid="uid://bntkjfqa56d76" path="res://assets/goblin732.png" id="2_34eak"]
+[ext_resource type="Texture2D" uid="uid://qhuojnwtnonl" path="res://assets/goblin7365.png" id="3_b5nr6"]
+[ext_resource type="Texture2D" uid="uid://31lbwlu02r8o" path="res://assets/goblin8273.png" id="4_x35on"]
+[ext_resource type="Texture2D" uid="uid://cdrrk6ay5kyky" path="res://assets/goblin387646.png" id="5_8tcx4"]
+[ext_resource type="Texture2D" uid="uid://c7xg7bqfiomo6" path="res://assets/goblin.png" id="6_cquqe"]
+
+[sub_resource type="Animation" id="Animation_2bhk1"]
+resource_name = "goblins_in"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GoblinA:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.980352, 1.11204, -8.43717), Vector3(-0.980352, 0.633093, -6.4673), Vector3(-0.980352, 0.827476, -4.6898), Vector3(-0.980352, 1.57495, -2.81611), Vector3(-0.980352, 0.871563, -0.942418), Vector3(-0.980352, 2.0078, 0.931271), Vector3(-0.980352, 1.12406, 2.80496)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GoblinB:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.266667, 0.366667, 0.466667, 0.533333, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.707025, 1.07526, -8.42137), Vector3(0.707025, 1.67243, -6.67393), Vector3(0.707025, 1.21153, -4.91206), Vector3(0.707025, 1.58025, -3.19828), Vector3(0.707025, 0.922958, -1.42038), Vector3(0.707025, 1.44398, 0.357519), Vector3(0.707025, 1.05121, 2.13542)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GoblinC:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.166667, 0.266667, 0.366667, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.0783818, 0.969144, -7.60983), Vector3(-0.0783818, 1.15885, -7.01934), Vector3(-0.0783818, 0.694186, -6.13359), Vector3(-0.0783818, 1.99145, -5.34404), Vector3(-0.0783818, 0.892399, -4.42944), Vector3(-0.0783818, 1.64565, -3.20997), Vector3(-0.0783818, 1.05331, -2.29537)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GoblinD:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.166667, 0.266667, 0.366667, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.61902, 1.14887, -7.66567), Vector3(-1.61902, 1.79281, -7.08052), Vector3(-1.61902, 0.821397, -6.20279), Vector3(-1.61902, 1.66741, -5.14471), Vector3(-1.61902, 1.49742, -4.32108), Vector3(-1.61902, 0.861964, -3.22292), Vector3(-1.61902, 1.10078, -2.3993)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GoblinE:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.0457201, 1.07516, -7.6451), Vector3(0.0457201, 1.07115, -6.30045), Vector3(0.0457201, 1.52404, -4.9558), Vector3(0.0457201, 0.804624, -3.46687), Vector3(0.0457201, 1.69237, -2.17032), Vector3(0.0457201, 0.578179, -0.873765), Vector3(0.0457201, 1.05111, 0.422788)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GoblinF:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.970274, 1.01556, -9.86214), Vector3(0.970274, 1.99749, -8.80139), Vector3(0.970274, 1.88377, -7.74063), Vector3(0.970274, 0.709706, -5.08874), Vector3(0.970274, 1.71343, -3.35333), Vector3(0.970274, 0.799382, -1.83434), Vector3(0.970274, 1.0877, -0.315345)]
+}
+
+[sub_resource type="Animation" id="Animation_5wibn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GoblinA:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.980352, 1.12406, 2.80496)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GoblinB:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.707025, 1.05121, 2.13542)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GoblinC:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0783818, 1.05331, -2.29537)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GoblinD:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.61902, 1.10078, -2.3993)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GoblinE:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0457201, 1.05111, 0.422788)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GoblinF:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.970274, 1.0877, -0.315345)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p3780"]
+_data = {
+"RESET": SubResource("Animation_5wibn"),
+"goblins_in": SubResource("Animation_2bhk1")
+}
+
+[node name="C40Goblins" type="Node3D"]
+script = ExtResource("1_y23tc")
+anim_name = "goblins_in"
+
+[node name="GoblinA" type="Sprite3D" parent="."]
+transform = Transform3D(-2.29666e-08, -0.612493, 0.790476, -2.67729e-08, 0.790476, 0.612493, -1, -7.09646e-09, -3.45528e-08, -0.980352, 1.12406, 2.80496)
+flip_h = true
+pixel_size = 0.005
+alpha_cut = 1
+texture = ExtResource("1_8cygn")
+
+[node name="GoblinB" type="Sprite3D" parent="."]
+transform = Transform3D(-2.29666e-08, -0.612493, 0.790476, -2.67729e-08, 0.790476, 0.612493, -1, -7.09646e-09, -3.45528e-08, 0.707025, 1.05121, 2.13542)
+flip_h = true
+pixel_size = 0.005
+alpha_cut = 1
+texture = ExtResource("2_34eak")
+
+[node name="GoblinC" type="Sprite3D" parent="."]
+transform = Transform3D(-3.45528e-08, -0.612493, 0.790476, -2.67729e-08, 0.790476, 0.612493, -1, 0, -4.37114e-08, -0.0783818, 1.05331, -2.29537)
+alpha_cut = 1
+texture = ExtResource("3_b5nr6")
+
+[node name="GoblinD" type="Sprite3D" parent="."]
+transform = Transform3D(-3.45528e-08, -0.612493, 0.790476, -2.67729e-08, 0.790476, 0.612493, -1, 0, -4.37114e-08, -1.61902, 1.10078, -2.3993)
+pixel_size = 0.005
+alpha_cut = 1
+texture = ExtResource("4_x35on")
+
+[node name="GoblinE" type="Sprite3D" parent="."]
+transform = Transform3D(-3.45528e-08, -0.612493, 0.790476, -2.67729e-08, 0.790476, 0.612493, -1, 0, -4.37114e-08, 0.0457201, 1.05111, 0.422788)
+flip_h = true
+pixel_size = 0.005
+alpha_cut = 1
+texture = ExtResource("5_8tcx4")
+
+[node name="GoblinF" type="Sprite3D" parent="."]
+transform = Transform3D(-3.45528e-08, -0.612493, 0.790476, -2.67729e-08, 0.790476, 0.612493, -1, 0, -4.37114e-08, 0.970274, 1.0877, -0.315345)
+alpha_cut = 1
+texture = ExtResource("6_cquqe")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_p3780")
+}

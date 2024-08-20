@@ -1,0 +1,164 @@
+[gd_scene load_steps=8 format=3 uid="uid://dfqkxb2g2r4tr"]
+
+[ext_resource type="Script" path="res://scripts/monster.gd" id="1_epyui"]
+[ext_resource type="Texture2D" uid="uid://ddibhnshe27li" path="res://assets/firefly5543.png" id="1_gxu2s"]
+[ext_resource type="Texture2D" uid="uid://4pgr05c0ta1r" path="res://assets/fish84645.png" id="2_mwkq5"]
+[ext_resource type="Texture2D" uid="uid://do6gcsj7hmoxe" path="res://assets/rat1.png" id="3_mrd2c"]
+
+[sub_resource type="Animation" id="Animation_7mia8"]
+resource_name = "critter_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fly:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1.07177, 1.03526),
+"update": 0,
+"values": [Vector3(10.7864, 7.05677, 1.41834), Vector3(-0.0320048, 0.991562, 0.313342)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fish:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(7.13399, -5.25936, 1.63409), Vector3(3.32502, 0.0151591, 1.24504), Vector3(1.97202, 0.475146, 1.10685), Vector3(0.957276, -0.557734, 1.0032)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Rat:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(10.0426, -0.975355, 0.443907), Vector3(-0.968079, -1.11033, -0.68073)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Fly:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.366667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.225375, -0.142117, 0.632473), Vector3(-0.110369, 0.09915, -0.621243), Vector3(-0.222695, -0.0484309, 0.216571)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Fish:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.0761384, 0.114282, -0.783371), Vector3(-0.227615, -0.0774104, 0.346201), Vector3(-0.201249, 0.00800691, -0.0501481)]
+}
+
+[sub_resource type="Animation" id="Animation_oj7a0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fly:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0320048, 0.991562, 0.313342)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fish:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.957276, -0.557734, 1.0032)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Rat:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.968079, -1.11033, -0.68073)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Fly:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.225375, -0.142117, 0.632473)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Fish:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0761384, 0.114282, -0.783371)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j7iai"]
+_data = {
+"RESET": SubResource("Animation_oj7a0"),
+"critter_in": SubResource("Animation_7mia8")
+}
+
+[node name="C0Critters" type="Node3D"]
+transform = Transform3D(-0.101612, 0, 0.994824, 0, 1, 0, -0.994824, 0, -0.101612, 0, 1.6294, 0)
+script = ExtResource("1_epyui")
+anim_name = "critter_in"
+
+[node name="Fly" type="Sprite3D" parent="."]
+transform = Transform3D(0.817147, -0.559652, -0.138057, 0.576191, 0.78617, 0.223472, -0.0165302, -0.262157, 0.964884, -0.0320048, 0.991562, 0.313342)
+alpha_cut = 1
+texture = ExtResource("1_gxu2s")
+
+[node name="Fish" type="Sprite3D" parent="."]
+transform = Transform3D(0.710038, 0.694923, 0.113703, -0.703627, 0.706486, 0.0760649, -0.0274705, -0.134014, 0.990599, 0.957276, -0.557734, 1.0032)
+alpha_cut = 1
+texture = ExtResource("2_mwkq5")
+
+[node name="Rat" type="Sprite3D" parent="."]
+transform = Transform3D(0.999783, 0.0207219, 0.00212432, -0.0207219, 0.978985, 0.202877, 0.00212432, -0.202877, 0.979202, -0.968079, -1.11033, -0.68073)
+alpha_cut = 1
+texture = ExtResource("3_mrd2c")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j7iai")
+}

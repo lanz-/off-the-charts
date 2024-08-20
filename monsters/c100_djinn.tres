@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ChallengeEntity" load_steps=3 format=3 uid="uid://cj00i0jefcm5b"]
+
+[ext_resource type="PackedScene" uid="uid://c1df0xbwyedcu" path="res://scenes/c100_djinn.tscn" id="1_3c1gj"]
+[ext_resource type="Script" path="res://scripts/challenge_entity.gd" id="1_quws7"]
+
+[resource]
+script = ExtResource("1_quws7")
+name = "Djinn"
+scene = ExtResource("1_3c1gj")
+challenge_level = 100
